@@ -1,0 +1,4 @@
+# Browser automation (the only hard dependency). After installing run:  python -m playwright install chromium
+playwright>=1.49,<2
+# IANA timezone database - REQUIRED on Windows for Pacific-time date checks (Linux/macOS ship it already)
+tzdata>=2024.1
