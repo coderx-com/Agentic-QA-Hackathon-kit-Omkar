@@ -1,0 +1,187 @@
+[
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "POST",
+  "url": "http://localhost:8000/api/demo/session",
+  "status": 201,
+  "request": null,
+  "response": {
+   "customer": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "display_name": "Avery Demo",
+    "masked_email": "a***@example.test"
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "POST",
+  "url": "http://localhost:8000/api/transfers",
+  "status": 201,
+  "request": "{\"source_account_id\":\"00000000-0000-0000-0000-000000000101\",\"destination_account_id\":\"00000000-0000-0000-0000-000000000102\",\"amount\":\"-5.00\",\"memo\":\"QA-A290 C-XFER-10\"}",
+  "response": {
+   "transaction": {
+    "id": "94bfa960-e5f1-4c7a-9112-0a36cd5e0f87",
+    "type": "transfer",
+    "status": "completed",
+    "amount": "-5.00",
+    "memo": "QA-A290 C-XFER-10",
+    "occurred_at": "2026-10-21T01:54:40.897298Z",
+    "source_account": {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042"
+    },
+    "destination_account": {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781"
+    },
+    "account_deltas": [
+     {
+      "account_id": "00000000-0000-0000-0000-000000000101",
+      "amount_delta": "5.00"
+     },
+     {
+      "account_id": "00000000-0000-0000-0000-000000000102",
+      "amount_delta": "-5.00"
+     }
+    ]
+   },
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4374.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8270.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4374.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8270.00"
+    }
+   ]
+  }
+ }
+]

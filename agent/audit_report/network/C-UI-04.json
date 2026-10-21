@@ -1,0 +1,3350 @@
+[
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "POST",
+  "url": "http://localhost:8000/api/demo/session",
+  "status": 201,
+  "request": null,
+  "response": {
+   "customer": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "display_name": "Avery Demo",
+    "masked_email": "a***@example.test"
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/transactions",
+  "status": 200,
+  "request": null,
+  "response": {
+   "transactions": [
+    {
+     "id": "c50584d4-c414-430e-9df1-66b4632fe9dc",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 compensation for C-XFER-16",
+     "occurred_at": "2026-10-21T01:55:02.858437Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "c2abe2c3-dae5-46fe-b1b3-cd5d8a9c7277",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 fault injection",
+     "occurred_at": "2026-10-21T01:55:02.261172Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "6f53f743-4d59-461d-aa75-7ecd15740a0d",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 compensation for C-XFER-15",
+     "occurred_at": "2026-10-21T01:54:58.610323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "0e9288fd-3ed7-4605-8760-b76a015e790b",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 double submit",
+     "occurred_at": "2026-10-21T01:54:57.763761Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "6b6e01b3-7c55-4336-9db4-8a8152756791",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 compensation for C-XFER-14",
+     "occurred_at": "2026-10-21T01:54:55.372654Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "5ed8db7a-cbed-43e3-8650-cbd43ae0d7f2",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 exact balance",
+     "occurred_at": "2026-10-21T01:54:54.783828Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "f9462c54-c2e9-427b-908a-e1cfeec82349",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 compensation for C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:52.325635Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "0799477c-9c43-4823-a906-6c3e66a4717a",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:50.814276Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "52a0919b-751a-49a9-84f1-20e5c2346539",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "5.00",
+     "memo": "QA-A290 compensation for C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:42.411323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "5.00"
+      }
+     ]
+    },
+    {
+     "id": "94bfa960-e5f1-4c7a-9112-0a36cd5e0f87",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "-5.00",
+     "memo": "QA-A290 C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:40.897298Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-5.00"
+      }
+     ]
+    },
+    {
+     "id": "5917a5cb-8c3c-4261-9867-393241f28cec",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-09",
+     "occurred_at": "2026-10-21T01:54:37.665238Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "81e4eb9a-0363-4905-aaef-20170a757954",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-08",
+     "occurred_at": "2026-10-21T01:54:34.433976Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "42526d9f-c8c5-4e36-9fd4-4804c53fefa4",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": null,
+     "occurred_at": "2026-10-21T01:54:24.417847Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "cc25f491-1fc5-4ab7-9218-ce1d9f2b8702",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": "QA-A290 valid transfer",
+     "occurred_at": "2026-10-21T01:54:08.782819Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000212",
+     "type": "deposit",
+     "status": "failed",
+     "amount": "700.00",
+     "memo": "Returned demo deposit",
+     "occurred_at": "2025-09-03T14:50:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000211",
+     "type": "withdrawal",
+     "status": "pending",
+     "amount": "125.00",
+     "memo": "Pending demo debit",
+     "occurred_at": "2025-08-08T18:25:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000210",
+     "type": "withdrawal",
+     "status": "failed",
+     "amount": "900.00",
+     "memo": "Declined demo item",
+     "occurred_at": "2025-07-19T21:05:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000209",
+     "type": "deposit",
+     "status": "pending",
+     "amount": "400.00",
+     "memo": "Pending demo deposit",
+     "occurred_at": "2025-07-02T16:40:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000208",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "950.00",
+     "memo": "Annual bonus",
+     "occurred_at": "2025-06-15T19:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "950.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000207",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "175.00",
+     "memo": "Move to checking",
+     "occurred_at": "2025-04-10T15:20:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-175.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "175.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000206",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "300.00",
+     "memo": "Demo home repair",
+     "occurred_at": "2025-03-22T19:10:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-300.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000205",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "120.00",
+     "memo": "Demo utilities",
+     "occurred_at": "2025-03-05T02:45:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-120.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000204",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "250.00",
+     "memo": "Monthly savings",
+     "occurred_at": "2025-02-14T18:15:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-250.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "250.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000203",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "500.00",
+     "memo": "Savings contribution",
+     "occurred_at": "2025-02-01T16:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "500.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000202",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "85.25",
+     "memo": "Demo groceries",
+     "occurred_at": "2025-01-18T20:30:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-85.25"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000201",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "1200.00",
+     "memo": "Demo payroll",
+     "occurred_at": "2025-01-03T17:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "1200.00"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/transactions",
+  "status": 200,
+  "request": null,
+  "response": {
+   "transactions": [
+    {
+     "id": "c50584d4-c414-430e-9df1-66b4632fe9dc",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 compensation for C-XFER-16",
+     "occurred_at": "2026-10-21T01:55:02.858437Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "c2abe2c3-dae5-46fe-b1b3-cd5d8a9c7277",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 fault injection",
+     "occurred_at": "2026-10-21T01:55:02.261172Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "6f53f743-4d59-461d-aa75-7ecd15740a0d",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 compensation for C-XFER-15",
+     "occurred_at": "2026-10-21T01:54:58.610323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "0e9288fd-3ed7-4605-8760-b76a015e790b",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 double submit",
+     "occurred_at": "2026-10-21T01:54:57.763761Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "6b6e01b3-7c55-4336-9db4-8a8152756791",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 compensation for C-XFER-14",
+     "occurred_at": "2026-10-21T01:54:55.372654Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "5ed8db7a-cbed-43e3-8650-cbd43ae0d7f2",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 exact balance",
+     "occurred_at": "2026-10-21T01:54:54.783828Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "f9462c54-c2e9-427b-908a-e1cfeec82349",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 compensation for C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:52.325635Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "0799477c-9c43-4823-a906-6c3e66a4717a",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:50.814276Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "52a0919b-751a-49a9-84f1-20e5c2346539",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "5.00",
+     "memo": "QA-A290 compensation for C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:42.411323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "5.00"
+      }
+     ]
+    },
+    {
+     "id": "94bfa960-e5f1-4c7a-9112-0a36cd5e0f87",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "-5.00",
+     "memo": "QA-A290 C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:40.897298Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-5.00"
+      }
+     ]
+    },
+    {
+     "id": "5917a5cb-8c3c-4261-9867-393241f28cec",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-09",
+     "occurred_at": "2026-10-21T01:54:37.665238Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "81e4eb9a-0363-4905-aaef-20170a757954",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-08",
+     "occurred_at": "2026-10-21T01:54:34.433976Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "42526d9f-c8c5-4e36-9fd4-4804c53fefa4",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": null,
+     "occurred_at": "2026-10-21T01:54:24.417847Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "cc25f491-1fc5-4ab7-9218-ce1d9f2b8702",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": "QA-A290 valid transfer",
+     "occurred_at": "2026-10-21T01:54:08.782819Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000212",
+     "type": "deposit",
+     "status": "failed",
+     "amount": "700.00",
+     "memo": "Returned demo deposit",
+     "occurred_at": "2025-09-03T14:50:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000211",
+     "type": "withdrawal",
+     "status": "pending",
+     "amount": "125.00",
+     "memo": "Pending demo debit",
+     "occurred_at": "2025-08-08T18:25:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000210",
+     "type": "withdrawal",
+     "status": "failed",
+     "amount": "900.00",
+     "memo": "Declined demo item",
+     "occurred_at": "2025-07-19T21:05:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000209",
+     "type": "deposit",
+     "status": "pending",
+     "amount": "400.00",
+     "memo": "Pending demo deposit",
+     "occurred_at": "2025-07-02T16:40:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000208",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "950.00",
+     "memo": "Annual bonus",
+     "occurred_at": "2025-06-15T19:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "950.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000207",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "175.00",
+     "memo": "Move to checking",
+     "occurred_at": "2025-04-10T15:20:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-175.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "175.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000206",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "300.00",
+     "memo": "Demo home repair",
+     "occurred_at": "2025-03-22T19:10:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-300.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000205",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "120.00",
+     "memo": "Demo utilities",
+     "occurred_at": "2025-03-05T02:45:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-120.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000204",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "250.00",
+     "memo": "Monthly savings",
+     "occurred_at": "2025-02-14T18:15:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-250.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "250.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000203",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "500.00",
+     "memo": "Savings contribution",
+     "occurred_at": "2025-02-01T16:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "500.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000202",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "85.25",
+     "memo": "Demo groceries",
+     "occurred_at": "2025-01-18T20:30:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-85.25"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000201",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "1200.00",
+     "memo": "Demo payroll",
+     "occurred_at": "2025-01-03T17:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "1200.00"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts/00000000-0000-0000-0000-000000000102",
+  "status": 200,
+  "request": null,
+  "response": {
+   "account": {
+    "id": "00000000-0000-0000-0000-000000000102",
+    "name": "Rainy Day Savings",
+    "type": "savings",
+    "masked_number": "\u2022\u2022\u2022\u2022 7781",
+    "currency": "USD",
+    "balance": "8275.00"
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/transactions?account_id=00000000-0000-0000-0000-000000000102",
+  "status": 200,
+  "request": null,
+  "response": {
+   "transactions": [
+    {
+     "id": "c50584d4-c414-430e-9df1-66b4632fe9dc",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 compensation for C-XFER-16",
+     "occurred_at": "2026-10-21T01:55:02.858437Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "c2abe2c3-dae5-46fe-b1b3-cd5d8a9c7277",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 fault injection",
+     "occurred_at": "2026-10-21T01:55:02.261172Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "6f53f743-4d59-461d-aa75-7ecd15740a0d",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 compensation for C-XFER-15",
+     "occurred_at": "2026-10-21T01:54:58.610323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "0e9288fd-3ed7-4605-8760-b76a015e790b",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 double submit",
+     "occurred_at": "2026-10-21T01:54:57.763761Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "6b6e01b3-7c55-4336-9db4-8a8152756791",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 compensation for C-XFER-14",
+     "occurred_at": "2026-10-21T01:54:55.372654Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "5ed8db7a-cbed-43e3-8650-cbd43ae0d7f2",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 exact balance",
+     "occurred_at": "2026-10-21T01:54:54.783828Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "f9462c54-c2e9-427b-908a-e1cfeec82349",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 compensation for C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:52.325635Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "0799477c-9c43-4823-a906-6c3e66a4717a",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:50.814276Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "52a0919b-751a-49a9-84f1-20e5c2346539",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "5.00",
+     "memo": "QA-A290 compensation for C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:42.411323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "5.00"
+      }
+     ]
+    },
+    {
+     "id": "94bfa960-e5f1-4c7a-9112-0a36cd5e0f87",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "-5.00",
+     "memo": "QA-A290 C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:40.897298Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-5.00"
+      }
+     ]
+    },
+    {
+     "id": "5917a5cb-8c3c-4261-9867-393241f28cec",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-09",
+     "occurred_at": "2026-10-21T01:54:37.665238Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "81e4eb9a-0363-4905-aaef-20170a757954",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-08",
+     "occurred_at": "2026-10-21T01:54:34.433976Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "42526d9f-c8c5-4e36-9fd4-4804c53fefa4",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": null,
+     "occurred_at": "2026-10-21T01:54:24.417847Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "cc25f491-1fc5-4ab7-9218-ce1d9f2b8702",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": "QA-A290 valid transfer",
+     "occurred_at": "2026-10-21T01:54:08.782819Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000212",
+     "type": "deposit",
+     "status": "failed",
+     "amount": "700.00",
+     "memo": "Returned demo deposit",
+     "occurred_at": "2025-09-03T14:50:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000210",
+     "type": "withdrawal",
+     "status": "failed",
+     "amount": "900.00",
+     "memo": "Declined demo item",
+     "occurred_at": "2025-07-19T21:05:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000207",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "175.00",
+     "memo": "Move to checking",
+     "occurred_at": "2025-04-10T15:20:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-175.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "175.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000206",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "300.00",
+     "memo": "Demo home repair",
+     "occurred_at": "2025-03-22T19:10:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-300.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000204",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "250.00",
+     "memo": "Monthly savings",
+     "occurred_at": "2025-02-14T18:15:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-250.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "250.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000203",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "500.00",
+     "memo": "Savings contribution",
+     "occurred_at": "2025-02-01T16:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "500.00"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts/00000000-0000-0000-0000-000000000102",
+  "status": 200,
+  "request": null,
+  "response": {
+   "account": {
+    "id": "00000000-0000-0000-0000-000000000102",
+    "name": "Rainy Day Savings",
+    "type": "savings",
+    "masked_number": "\u2022\u2022\u2022\u2022 7781",
+    "currency": "USD",
+    "balance": "8275.00"
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/transactions?account_id=00000000-0000-0000-0000-000000000102",
+  "status": 200,
+  "request": null,
+  "response": {
+   "transactions": [
+    {
+     "id": "c50584d4-c414-430e-9df1-66b4632fe9dc",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 compensation for C-XFER-16",
+     "occurred_at": "2026-10-21T01:55:02.858437Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "c2abe2c3-dae5-46fe-b1b3-cd5d8a9c7277",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 fault injection",
+     "occurred_at": "2026-10-21T01:55:02.261172Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "6f53f743-4d59-461d-aa75-7ecd15740a0d",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 compensation for C-XFER-15",
+     "occurred_at": "2026-10-21T01:54:58.610323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "0e9288fd-3ed7-4605-8760-b76a015e790b",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 double submit",
+     "occurred_at": "2026-10-21T01:54:57.763761Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "6b6e01b3-7c55-4336-9db4-8a8152756791",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 compensation for C-XFER-14",
+     "occurred_at": "2026-10-21T01:54:55.372654Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "5ed8db7a-cbed-43e3-8650-cbd43ae0d7f2",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 exact balance",
+     "occurred_at": "2026-10-21T01:54:54.783828Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "f9462c54-c2e9-427b-908a-e1cfeec82349",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 compensation for C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:52.325635Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "0799477c-9c43-4823-a906-6c3e66a4717a",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:50.814276Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "52a0919b-751a-49a9-84f1-20e5c2346539",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "5.00",
+     "memo": "QA-A290 compensation for C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:42.411323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "5.00"
+      }
+     ]
+    },
+    {
+     "id": "94bfa960-e5f1-4c7a-9112-0a36cd5e0f87",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "-5.00",
+     "memo": "QA-A290 C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:40.897298Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-5.00"
+      }
+     ]
+    },
+    {
+     "id": "5917a5cb-8c3c-4261-9867-393241f28cec",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-09",
+     "occurred_at": "2026-10-21T01:54:37.665238Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "81e4eb9a-0363-4905-aaef-20170a757954",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-08",
+     "occurred_at": "2026-10-21T01:54:34.433976Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "42526d9f-c8c5-4e36-9fd4-4804c53fefa4",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": null,
+     "occurred_at": "2026-10-21T01:54:24.417847Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "cc25f491-1fc5-4ab7-9218-ce1d9f2b8702",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": "QA-A290 valid transfer",
+     "occurred_at": "2026-10-21T01:54:08.782819Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000212",
+     "type": "deposit",
+     "status": "failed",
+     "amount": "700.00",
+     "memo": "Returned demo deposit",
+     "occurred_at": "2025-09-03T14:50:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000210",
+     "type": "withdrawal",
+     "status": "failed",
+     "amount": "900.00",
+     "memo": "Declined demo item",
+     "occurred_at": "2025-07-19T21:05:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000207",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "175.00",
+     "memo": "Move to checking",
+     "occurred_at": "2025-04-10T15:20:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-175.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "175.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000206",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "300.00",
+     "memo": "Demo home repair",
+     "occurred_at": "2025-03-22T19:10:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-300.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000204",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "250.00",
+     "memo": "Monthly savings",
+     "occurred_at": "2025-02-14T18:15:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-250.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "250.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000203",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "500.00",
+     "memo": "Savings contribution",
+     "occurred_at": "2025-02-01T16:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "500.00"
+      }
+     ]
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/transactions?account_id=00000000-0000-0000-0000-000000000102",
+  "status": 200,
+  "request": null,
+  "response": {
+   "transactions": [
+    {
+     "id": "c50584d4-c414-430e-9df1-66b4632fe9dc",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 compensation for C-XFER-16",
+     "occurred_at": "2026-10-21T01:55:02.858437Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "c2abe2c3-dae5-46fe-b1b3-cd5d8a9c7277",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.13",
+     "memo": "QA-A290 fault injection",
+     "occurred_at": "2026-10-21T01:55:02.261172Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.13"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.13"
+      }
+     ]
+    },
+    {
+     "id": "6f53f743-4d59-461d-aa75-7ecd15740a0d",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 compensation for C-XFER-15",
+     "occurred_at": "2026-10-21T01:54:58.610323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "0e9288fd-3ed7-4605-8760-b76a015e790b",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.11",
+     "memo": "QA-A290 double submit",
+     "occurred_at": "2026-10-21T01:54:57.763761Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-0.11"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.11"
+      }
+     ]
+    },
+    {
+     "id": "6b6e01b3-7c55-4336-9db4-8a8152756791",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 compensation for C-XFER-14",
+     "occurred_at": "2026-10-21T01:54:55.372654Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "5ed8db7a-cbed-43e3-8650-cbd43ae0d7f2",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.75",
+     "memo": "QA-A290 exact balance",
+     "occurred_at": "2026-10-21T01:54:54.783828Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.75"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.75"
+      }
+     ]
+    },
+    {
+     "id": "f9462c54-c2e9-427b-908a-e1cfeec82349",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 compensation for C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:52.325635Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "0799477c-9c43-4823-a906-6c3e66a4717a",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "4369.76",
+     "memo": "QA-A290 C-XFER-13",
+     "occurred_at": "2026-10-21T01:54:50.814276Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-4369.76"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "4369.76"
+      }
+     ]
+    },
+    {
+     "id": "52a0919b-751a-49a9-84f1-20e5c2346539",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "5.00",
+     "memo": "QA-A290 compensation for C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:42.411323Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "5.00"
+      }
+     ]
+    },
+    {
+     "id": "94bfa960-e5f1-4c7a-9112-0a36cd5e0f87",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "-5.00",
+     "memo": "QA-A290 C-XFER-10",
+     "occurred_at": "2026-10-21T01:54:40.897298Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "5.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-5.00"
+      }
+     ]
+    },
+    {
+     "id": "5917a5cb-8c3c-4261-9867-393241f28cec",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-09",
+     "occurred_at": "2026-10-21T01:54:37.665238Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "81e4eb9a-0363-4905-aaef-20170a757954",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "0.00",
+     "memo": "QA-A290 C-XFER-08",
+     "occurred_at": "2026-10-21T01:54:34.433976Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "0.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "42526d9f-c8c5-4e36-9fd4-4804c53fefa4",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": null,
+     "occurred_at": "2026-10-21T01:54:24.417847Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "cc25f491-1fc5-4ab7-9218-ce1d9f2b8702",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "1.77",
+     "memo": "QA-A290 valid transfer",
+     "occurred_at": "2026-10-21T01:54:08.782819Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-1.77"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "1.77"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000212",
+     "type": "deposit",
+     "status": "failed",
+     "amount": "700.00",
+     "memo": "Returned demo deposit",
+     "occurred_at": "2025-09-03T14:50:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000210",
+     "type": "withdrawal",
+     "status": "failed",
+     "amount": "900.00",
+     "memo": "Declined demo item",
+     "occurred_at": "2025-07-19T21:05:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "0.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000207",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "175.00",
+     "memo": "Move to checking",
+     "occurred_at": "2025-04-10T15:20:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-175.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "175.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000206",
+     "type": "withdrawal",
+     "status": "completed",
+     "amount": "300.00",
+     "memo": "Demo home repair",
+     "occurred_at": "2025-03-22T19:10:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "destination_account": null,
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "-300.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000204",
+     "type": "transfer",
+     "status": "completed",
+     "amount": "250.00",
+     "memo": "Monthly savings",
+     "occurred_at": "2025-02-14T18:15:00Z",
+     "source_account": {
+      "id": "00000000-0000-0000-0000-000000000101",
+      "name": "Everyday Checking",
+      "masked_number": "\u2022\u2022\u2022\u2022 1042"
+     },
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000101",
+       "amount_delta": "-250.00"
+      },
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "250.00"
+      }
+     ]
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000203",
+     "type": "deposit",
+     "status": "completed",
+     "amount": "500.00",
+     "memo": "Savings contribution",
+     "occurred_at": "2025-02-01T16:00:00Z",
+     "source_account": null,
+     "destination_account": {
+      "id": "00000000-0000-0000-0000-000000000102",
+      "name": "Rainy Day Savings",
+      "masked_number": "\u2022\u2022\u2022\u2022 7781"
+     },
+     "account_deltas": [
+      {
+       "account_id": "00000000-0000-0000-0000-000000000102",
+       "amount_delta": "500.00"
+      }
+     ]
+    }
+   ]
+  }
+ }
+]

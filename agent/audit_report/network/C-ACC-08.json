@@ -1,0 +1,86 @@
+[
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 401,
+  "request": null,
+  "response": {
+   "error": {
+    "code": "unauthenticated",
+    "message": "A valid demo session is required."
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 401,
+  "request": null,
+  "response": {
+   "error": {
+    "code": "unauthenticated",
+    "message": "A valid demo session is required."
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 401,
+  "request": null,
+  "response": {
+   "error": {
+    "code": "unauthenticated",
+    "message": "A valid demo session is required."
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 401,
+  "request": null,
+  "response": {
+   "error": {
+    "code": "unauthenticated",
+    "message": "A valid demo session is required."
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ }
+]

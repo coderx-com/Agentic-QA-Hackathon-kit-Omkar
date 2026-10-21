@@ -1,0 +1,79 @@
+[
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "POST",
+  "url": "http://localhost:8000/api/demo/session",
+  "status": 201,
+  "request": null,
+  "response": {
+   "customer": {
+    "id": "00000000-0000-0000-0000-000000000001",
+    "display_name": "Avery Demo",
+    "masked_email": "a***@example.test"
+   }
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/me",
+  "status": 200,
+  "request": null,
+  "response": {
+   "id": "00000000-0000-0000-0000-000000000001",
+   "display_name": "Avery Demo",
+   "masked_email": "a***@example.test"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/health",
+  "status": 200,
+  "request": null,
+  "response": {
+   "status": "ok"
+  }
+ },
+ {
+  "method": "GET",
+  "url": "http://localhost:8000/api/accounts",
+  "status": 200,
+  "request": null,
+  "response": {
+   "accounts": [
+    {
+     "id": "00000000-0000-0000-0000-000000000101",
+     "name": "Everyday Checking",
+     "type": "checking",
+     "masked_number": "\u2022\u2022\u2022\u2022 1042",
+     "currency": "USD",
+     "balance": "4369.75"
+    },
+    {
+     "id": "00000000-0000-0000-0000-000000000102",
+     "name": "Rainy Day Savings",
+     "type": "savings",
+     "masked_number": "\u2022\u2022\u2022\u2022 7781",
+     "currency": "USD",
+     "balance": "8275.00"
+    }
+   ]
+  }
+ }
+]
